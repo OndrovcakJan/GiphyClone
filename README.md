@@ -1,1 +1,1 @@
-# GiphyClone
+# GiphyClone, v průběhu práce
