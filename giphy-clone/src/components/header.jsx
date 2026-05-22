@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { HiEllipsisVertical } from "react-icons/hi2";
+
+
 
 
 const Header = () => {
@@ -15,10 +18,17 @@ const Header = () => {
             </Link>
 
     {/* render categories dropdown */}
-    <Link className="px-4 py-1 border-b-4 hidden lg:block hover:bg-gradient-to-r hover:from-purple-600 hover:via-blue-600 hover:to-pink-600">
+    <Link className={`px-4 py-1 border-b-4 hidden lg:block hover:gradient ${showCategories ? "gradient" : ""}`}>
     Reactions</Link>
+    <button onClick={() => setShowCategories(!showCategories)} >
+        <HiEllipsisVertical size={35} 
+        className={`py-0.5 border-b-4 hidden lg:block hover:gradient ${showCategories ? "gradient" : ""}`}/>
+    </button>
 
+    <div className="h-9 bg-gray-700 pt-1.5 px-6 cursor-pointer rounded">
+    <Link to="/favorites">Favorite GIFs</Link>
 
+    </div>
         </div>
         </nav>
   )
