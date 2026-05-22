@@ -4,7 +4,7 @@ import AppLayout from './layouts/app-layout'
 
 import Home from './pages/home'
 import Category from './pages/category'
-import Search from './pages/search'
+import SearchPage from './pages/search'
 import GifPage from './pages/single-gif'
 import Favorites from './pages/favorites'
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
 
     children:[
       {
-        path: '/',
+        index: true,
         element: <Home />,
       },
       {
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
         element: <Category />,
       },
       {
-        path: '/:search/query',
-        element: <Search />,
+        path: '/search/:query',
+        element: <SearchPage />,
       },
       {
         path: '/:type/:slug',
