@@ -1,11 +1,11 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import AppLayout from './layouts/app-layout'
 
 import Home from './pages/home'
 import Category from './pages/category'
 import Search from './pages/search'
-import GifPage from './pages/gif-page'
+import GifPage from './pages/single-gif'
 import Favorites from './pages/favorites'
 
 
@@ -50,9 +50,7 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return (<h1 className="text-4xl font-bold text-blue-500">
-  Tailwind funguje
-</h1>)
+  return <RouterProvider router={router} />
 }
 
 export default App

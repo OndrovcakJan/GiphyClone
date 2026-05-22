@@ -1,7 +1,14 @@
+import { Outlet } from "react-router-dom"
 
 const AppLayout = () => {
   return (
-    <div>AppLayout</div>
+    <div>
+      {/* header */}
+
+      <main>
+        <Outlet />
+      </main>
+    </div>
   )
 }
 
