@@ -21,7 +21,7 @@ const Header = () => {
         fetchGifCategories();
     }, []);
 
-
+//oprava api key
   return (
     <nav>
         <div className="relative flex gap-4 justify-between items-center mb-2">
