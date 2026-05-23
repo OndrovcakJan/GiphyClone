@@ -20,19 +20,25 @@ const filters = [
   },
 ];
 
-const FilterGif = ({alignLeft = false, showTrending = false}) => {
+const FilterGif = ({ alignLeft = false, showTrending = false }) => {
   const { filter, setFilter } = GifState();
 
   return (
-    <div>
+    <div className={`flex my-3 gap-3 ${alignLeft ? "justify-start" : "justify-center"} ${showTrending ? "justify-between flex-col sm:flex-row sm:items-center" 
+    : ""}`}>
       {showTrending && (
-        <span>
+        <span className="flex gap-2">
           {showTrending && (
             <HiMiniArrowTrendingUp size={25} className="text-teal-400" />
           )}
           <span className="font-semibold text-gray-400">Trending</span>
         </span>
       )}
+      <div>
+        {filters.map((f) => {
+          return <span>{f.title}</span>
+        })}
+      </div>
     </div>
   );
 };
