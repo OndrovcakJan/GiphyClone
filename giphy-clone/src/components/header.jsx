@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiEllipsisVertical, HiMiniBars3BottomRight } from "react-icons/hi2";
-import { GifState } from "../context/gif-contex";
+import { GifState } from "../context/gif-context";
 
 
 

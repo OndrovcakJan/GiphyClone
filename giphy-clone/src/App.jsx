@@ -7,7 +7,7 @@ import Category from './pages/category'
 import SearchPage from './pages/search'
 import GifPage from './pages/single-gif'
 import Favorites from './pages/favorites'
-import GifProvider from './context/gif-contex'
+import GifProvider from './context/gif-context'
 
 
 //homepage
