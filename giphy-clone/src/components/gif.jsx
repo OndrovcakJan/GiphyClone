@@ -14,10 +14,20 @@ const Gif = ({ gif, hover = true }) => {
             src={imgSrc}
             alt={title}
             className="w-full object-cover rounded transition-all duration-300"
-          />
-        ) : (
+          /> ) : (
           <div className="w-full h-48 bg-gray-800 rounded" />
         )}
+          {hover && (
+            <div>
+                <img
+                src={gif?.user?.avatar_url}
+                alt={gif?.user?.display_name}
+                className="h-8"
+                />
+                <span>{gif?.user?.display_name}</span>
+            </div>
+          )}
+       
 
         </div>
     </Link>
