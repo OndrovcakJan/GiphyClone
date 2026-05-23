@@ -2,4 +2,8 @@
 	.gradient {
 		background-image: linear-gradient(to right, #9333ea, #2563eb, #ec4899);
 	}
+
+	.gradient-hover:hover {
+		background-image: linear-gradient(to right, #9333ea, #2563eb, #ec4899);
+	}
 }
