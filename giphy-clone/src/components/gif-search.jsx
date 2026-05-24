@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { HiMiniXMark, HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import useKeyboardShortcut from "../hooks/useKeyboardShortcut";
 
 const GifSearch = () => {
   const [query, setQuery] = useState("");
@@ -11,6 +12,11 @@ const GifSearch = () => {
 
     navigate(`/search/${query}`);
   };
+
+  useKeyboardShortcut({
+    key: "Enter",
+    onKeyPressed: () => searchGIFs(),
+  });
 
   return (
     <div className="flex relative w-full">
