@@ -27,7 +27,7 @@ const Gif = ({ gif, hover = true }) => {
                 <span>{gif?.user?.display_name}</span>
             </div>
           )}
-       
+       {/*  */}
 
         </div>
     </Link>

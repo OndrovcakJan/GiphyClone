@@ -24,8 +24,13 @@ const FilterGif = ({ alignLeft = false, showTrending = false }) => {
   const { filter, setFilter } = GifState();
 
   return (
-    <div className={`flex my-3 gap-3 ${alignLeft ? "justify-start" : "justify-center"} ${showTrending ? "justify-between flex-col sm:flex-row sm:items-center" 
-    : ""}`}>
+    <div
+      className={`flex my-3 gap-3 ${alignLeft ? "justify-start" : "justify-center"} ${
+        showTrending
+          ? "justify-between flex-col sm:flex-row sm:items-center"
+          : ""
+      }`}
+    >
       {showTrending && (
         <span className="flex gap-2">
           {showTrending && (
@@ -34,9 +39,19 @@ const FilterGif = ({ alignLeft = false, showTrending = false }) => {
           <span className="font-semibold text-gray-400">Trending</span>
         </span>
       )}
-      <div>
+      <div className="flex min-w-80 rounded-full bg-gray-800">
         {filters.map((f) => {
-          return <span>{f.title}</span>
+          return (
+            <span
+              onClick={() => setFilter(f.value)}
+              className={`${
+                filter === f.value ? f.background : ""
+              } font-semibold py-2 w-1/3 text-center rounded-full cursor-pointer `}
+              key={f.title}
+            >
+              {f.title}
+            </span>
+          );
         })}
       </div>
     </div>
